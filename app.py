@@ -54,3 +54,6 @@ def on_join(data):
 @app.route('/api/languages')
 def get_languages():
     return jsonify(SUPPORTED_LANGUAGES)
+
+if __name__ == '__main__':
+    socketio.run(app, host="0.0.0.0", port=5000, debug=True)
