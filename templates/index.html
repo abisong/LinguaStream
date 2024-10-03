@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Translation App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Real-Time Translation App</h1>
+        
+        <div id="role-selector">
+            <button onclick="selectRole('host')">Join as Host</button>
+            <button onclick="selectRole('listener')">Join as Listener</button>
+        </div>
+
+        <div id="host-interface">
+            <h2>Host Interface</h2>
+            <textarea id="host-input" placeholder="Type your message here..."></textarea>
+            <button onclick="sendMessage()">Send</button>
+        </div>
+
+        <div id="listener-interface">
+            <h2>Listener Interface</h2>
+            <select id="language-select" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <!-- Other language options will be populated by JavaScript -->
+            </select>
+            <div id="translation-output"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
