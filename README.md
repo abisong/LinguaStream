@@ -13,9 +13,9 @@ To push this project to GitHub, follow these steps:
    - Do not initialize the repository with a README, .gitignore, or license
    - Click "Create repository"
 
-2. Set up a personal access token:
+2. Set up a personal access token (PAT):
    - Go to https://github.com/settings/tokens
-   - Click "Generate new token"
+   - Click "Generate new token (classic)"
    - Give it a name (e.g., "LinguaStream Access Token")
    - Select the "repo" scope
    - Click "Generate token"
@@ -65,3 +65,11 @@ To run the application locally:
 4. Open a web browser and navigate to `http://localhost:5000`
 
 Enjoy using LinguaStream!
+
+## Note on GitHub Authentication
+
+GitHub no longer supports password authentication for HTTPS Git operations. You must use a personal access token (PAT) instead of your password when pushing to GitHub. This is why we created a PAT in step 2 of the "Pushing to GitHub" instructions.
+
+When you use the `git push` command, you'll be prompted for your username and password. Enter your GitHub username as usual, but instead of your GitHub password, paste the personal access token you generated.
+
+If you're having trouble with authentication, make sure you're using the PAT correctly and that it has the necessary permissions (the "repo" scope should be sufficient for this project).
