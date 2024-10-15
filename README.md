@@ -11,21 +11,23 @@ To push this project to GitHub, follow these steps:
    - Name your repository (e.g., "LinguaStream")
    - Choose whether to make it public or private
    - Do not initialize the repository with a README, .gitignore, or license
+   - Click "Create repository"
 
-2. Open a terminal in your project directory and run the following commands:
+2. Copy the URL of your new repository. It should look like:
+   `https://github.com/yourusername/LinguaStream.git`
 
+3. In your terminal, update the remote URL with your new GitHub repository:
    ```
-   git init
-   git add .
-   git commit -m "Initial commit of LinguaStream app"
-   git branch -M main
-   git remote add origin https://github.com/yourusername/LinguaStream.git
+   git remote set-url origin https://github.com/yourusername/LinguaStream.git
+   ```
+   Replace `yourusername` with your GitHub username and `LinguaStream` with your repository name if different.
+
+4. Push your code to GitHub:
+   ```
    git push -u origin main
    ```
 
-   Replace `yourusername` with your GitHub username and `LinguaStream` with your repository name if different.
-
-3. Refresh your GitHub repository page, and you should see all your project files there.
+5. Refresh your GitHub repository page, and you should see all your project files there.
 
 ## Running the Application
 
