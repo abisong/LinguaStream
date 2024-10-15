@@ -39,6 +39,10 @@ args = "Git Push"
 task = "workflow.run"
 args = "Update Git Remote"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Check Updated Remote"
+
 [[workflows.workflow]]
 name = "Start Flask App"
 author = "agent"
@@ -60,7 +64,7 @@ agentRequireRestartOnSave = false
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "git add README.md && git commit -m 'Update README with detailed GitHub push instructions including PAT usage'"
+args = "git add .replit && git commit -m 'Update .replit file'"
 
 [[workflows.workflow]]
 name = "Git Status"
@@ -116,6 +120,17 @@ agentRequireRestartOnSave = false
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "git remote set-url origin $GITHUB_REPO_URL"
+
+[[workflows.workflow]]
+name = "Check Updated Remote"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "git remote -v"
 
 [deployment]
 run = ["sh", "-c", "python main.py"]
