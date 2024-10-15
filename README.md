@@ -13,8 +13,13 @@ To push this project to GitHub, follow these steps:
    - Do not initialize the repository with a README, .gitignore, or license
    - Click "Create repository"
 
-2. Copy the URL of your new repository. It should look like:
-   `https://github.com/yourusername/LinguaStream.git`
+2. Set up a personal access token:
+   - Go to https://github.com/settings/tokens
+   - Click "Generate new token"
+   - Give it a name (e.g., "LinguaStream Access Token")
+   - Select the "repo" scope
+   - Click "Generate token"
+   - Copy the token (you won't be able to see it again)
 
 3. In your terminal, update the remote URL with your new GitHub repository:
    ```
@@ -22,12 +27,19 @@ To push this project to GitHub, follow these steps:
    ```
    Replace `yourusername` with your GitHub username and `LinguaStream` with your repository name if different.
 
-4. Push your code to GitHub:
+4. Set up your Git credentials:
+   ```
+   git config --global user.name "Your Name"
+   git config --global user.email "your.email@example.com"
+   ```
+
+5. Push your code to GitHub:
    ```
    git push -u origin main
    ```
+   When prompted for a password, use the personal access token you created in step 2.
 
-5. Refresh your GitHub repository page, and you should see all your project files there.
+6. Refresh your GitHub repository page, and you should see all your project files there.
 
 ## Running the Application
 
